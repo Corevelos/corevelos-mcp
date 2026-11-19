@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+expected='Shujaatali786/corevelos-mcp'
+
+matches_origin() {
+  case "$1" in
+    "git@github.com:$expected.git"|"ssh://git@github.com/$expected.git"|"https://github.com/$expected.git") return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+if [ "${1:-}" != origin ] || ! matches_origin "${2:-}" ||
+   ! matches_origin "$(git remote get-url --all origin)" ||
+   ! matches_origin "$(git remote get-url --push --all origin)"; then
+  printf 'Push refused. This checkout expects origin to be GitHub %s.\n' "$expected" >&2
+  exit 1
+fi
+
+cat >/dev/null

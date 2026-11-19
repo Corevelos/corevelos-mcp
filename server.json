@@ -1,0 +1,15 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.shujaatali786/corevelos",
+  "title": "Corevelos",
+  "description": "Create and operate isolated Corevelos sandboxes.",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/Shujaatali786/corevelos-mcp",
+    "id": "1464331504"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    { "type": "streamable-http", "url": "https://api.corevelos.com/mcp" }
+  ]
+}

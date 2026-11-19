@@ -1,0 +1,5 @@
+# Corevelos MCP
+
+- [Local bridge and remote configuration](README.md)
+- [Remote registry metadata](server.json)
+- [Private vulnerability reporting](SECURITY.md)
